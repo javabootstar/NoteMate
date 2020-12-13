@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-12 text-center mt-5">
+        <form #updateNotes="ngForm" (ngSubmit)="updateNote(updateNotes)">
+            <mat-form-field class="example-full-width mat-input-wrapper h3">
+                <mat-label>Note Title</mat-label>
+                <input matInput placeholder="Title" size="50" id="title" name="noteTitle"  value="{{ noteTitle }}" ngModel [(ngModel)]="noteTitle">
+              </mat-form-field>
+            <br>
+              <mat-form-field class="example-full-width mat-input-wrapper mt-3 h4">
+                <mat-label>NoteMate</mat-label>
+                <textarea rows="12" matInput name="notebody" value="{{ noteBody }}" ngModel [(ngModel)]="noteBody"></textarea>
+              </mat-form-field>
+              <div>
+                <button type="submit" class="pull-right" color="primary" mat-button >Update NoteMate</button>
+              </div>
+        </form>
+    </div>
+</div>

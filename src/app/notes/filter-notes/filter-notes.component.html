@@ -1,0 +1,29 @@
+<div class="filter-margin">
+    <form #filterform="ngForm" (ngSubmit)="filter(filterform)">
+        <mat-form-field class="mat-input-wrapper" appearance="outline">
+            <mat-label>Filter NoteMate</mat-label>
+            <input matInput placeholder="Type Filter ToDo" name="filter"  [(ngModel)]="filterData"  ngModel>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint: shopcart</mat-hint>
+          </mat-form-field>
+    </form>  
+
+    <div *ngFor="let notes of noteMates">
+        <mat-card class="example-card mt-2 mr-5 mat-input-wrapper">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{notes.noteTitle}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                {{notes.noteBody}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <a href="update-notes/{{notes.id}}" mat-raised-button color="primary">Update</a>
+              <button (click)="deleteNote(notes.id)" mat-raised-button color="warn">Delete</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+

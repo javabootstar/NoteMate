@@ -1,0 +1,34 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "noteTitle": "Prabhu Ram",
+      "noteBody": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quisquam unde sint voluptatibus eum ab, tempore modi dignissimos accusamus iste."
+    },
+    {
+      "noteTitle": "Prabhu Ram JI",
+      "noteBody": "Prabhu Ram, Mata Janaki, Bhaiya Laxaman, Hanuman Baba.",
+      "id": 2
+    },
+    {
+      "noteTitle": "Prabhu Shri Krishan Ji",
+      "noteBody": "Prabhu Shri Krishan Ji, Mata Kishori, Baldao Bhaiya, Or Hanuman Baba",
+      "id": 3
+    },
+    {
+      "noteTitle": "Hello World",
+      "noteBody": "First Project Note Mate made by in Angular.",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "noteTitle": "Rupesh",
+      "noteBody": "Rupesh Note Mates AngularJs."
+    },
+    {
+      "noteTitle": "Java",
+      "noteBody": "Please Got the java certification.",
+      "id": 6
+    }
+  ]
+}
