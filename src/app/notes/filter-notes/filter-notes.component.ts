@@ -14,27 +14,31 @@ export class FilterNotesComponent implements OnInit {
   noteMates: NoteMate;
 
   constructor(private noteMateService: NoteMateService) {
-    this.noteMateService.getAllNoteMates().subscribe( (data) => {
-      this.noteMates = data;
-      console.log(this.noteMates);
-    });
+    this.getAllNoteMates();
   }
 
   ngOnInit(): void {
   }
 
-  public filter(filter: NgForm): void {
-    this.filterData = filter.value.filter;
-    console.log(this.filterData);
-    this.noteMateService.searchNoteByNoteTitle(this.filterData).subscribe((data) => {
+  public filter(filterEvent: any): void {
+    this.noteMateService.searchNoteByNoteTitle(filterEvent.target.value).subscribe((data) => {
       this.noteMates = data;
-      console.log(this.noteMates);
+    });
+
+    if (filterEvent.target.value === '') {
+      this.getAllNoteMates();
+    }
+  }
+
+  private getAllNoteMates(): void {
+    this.noteMateService.getAllNoteMates().subscribe( (data) => {
+      this.noteMates = data;
     });
   }
 
   public deleteNote(id: number): void {
     this.noteMateService.deleteByNoteId(id).subscribe((data) => {
-        console.log(data);
+      console.log('Delete Successfully');
     });
   }
 }

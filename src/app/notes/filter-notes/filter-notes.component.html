@@ -2,7 +2,7 @@
     <form #filterform="ngForm" (ngSubmit)="filter(filterform)">
         <mat-form-field class="mat-input-wrapper" appearance="outline">
             <mat-label>Filter NoteMate</mat-label>
-            <input matInput placeholder="Type Filter ToDo" name="filter"  [(ngModel)]="filterData"  ngModel>
+            <input matInput placeholder="Type Filter ToDo" name="filter"  (keyup)="filter($event)"  [(ngModel)]="filterData"  ngModel>
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             <mat-hint>Hint: shopcart</mat-hint>
           </mat-form-field>

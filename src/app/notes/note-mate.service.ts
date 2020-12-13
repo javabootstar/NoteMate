@@ -21,12 +21,10 @@ export class NoteMateService {
   }
 
   public createNoteMate(noteMate: any): Observable<NoteMate> {
-    console.log(noteMate);
     return this.httpClient.post<NoteMate>(this.URL, noteMate);
   }
 
   public updateNoteMate(noteMate: any): Observable<NoteMate> {
-    console.log(noteMate);
     return this.httpClient.put<NoteMate>(this.URL + noteMate.id, noteMate);
   }
 
@@ -35,7 +33,7 @@ export class NoteMateService {
   }
 
   public searchNoteByNoteTitle(noteTitle: string): Observable<NoteMate> {
-    return this.httpClient.get<NoteMate>(this.URL + "?noteTitle=" + noteTitle);
+    return this.httpClient.get<NoteMate>("http://localhost:3000/notes?noteTitle=" + noteTitle);
   }
 
 }

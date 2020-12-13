@@ -16,19 +16,14 @@
       "id": 3
     },
     {
-      "noteTitle": "Hello World",
-      "noteBody": "First Project Note Mate made by in Angular.",
-      "id": 4
-    },
-    {
       "id": 5,
       "noteTitle": "Rupesh",
       "noteBody": "Rupesh Note Mates AngularJs."
     },
     {
-      "noteTitle": "Java",
-      "noteBody": "Please Got the java certification.",
-      "id": 6
+      "id": 6,
+      "noteTitle": "Java SE",
+      "noteBody": "Please Got the java certification."
     }
   ]
 }
